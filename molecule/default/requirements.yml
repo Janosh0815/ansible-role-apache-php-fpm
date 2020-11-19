@@ -1,5 +1,5 @@
 ---
-- src: geerlingguy.repo-remi
-- src: geerlingguy.apache
-- src: geerlingguy.php-versions
-- src: geerlingguy.php
+- src: janosh0815.repo_remi
+- src: janosh0815.apache
+- src: janosh0815.php_versions
+- src: janosh0815.php

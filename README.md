@@ -1,12 +1,10 @@
 # Ansible Role: Apache PHP-FPM
 
-[![CI](https://github.com/geerlingguy/ansible-role-apache-php-fpm/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-apache-php-fpm/actions?query=workflow%3ACI)
-
 An Ansible Role that configures Apache for PHP-FPM usage on RHEL/CentOS and Debian/Ubuntu.
 
 ## Requirements
 
-This role is dependent upon `geerlingguy.apache`, and also requires you have PHP running with PHP-FPM somewhere on the server or elsewhere (I usually configure PHP with the `geerlingguy.php` role).
+This role is dependent upon `janosh0815.apache`, and also requires you have PHP running with PHP-FPM somewhere on the server or elsewhere (I usually configure PHP with the `janosh0815.php` role).
 
 When configuring your Apache virtual hosts, you can add the following line to any vhost definition to enable passthrough to PHP-FPM:
 
@@ -16,7 +14,7 @@ When configuring your Apache virtual hosts, you can add the following line to an
     # If using a Unix socket:
     ProxyPassMatch ^/(.*\.php(/.*)?)$ "unix:/var/run/php5-fpm.sock|fcgi://localhost/var/www/example"
 
-For a full usage example with the `geerlingguy.apache` role, see the Example Playbook later in this README.
+For a full usage example with the `janosh0815.apache` role, see the Example Playbook later in this README.
 
 ### RedHat 6 and 7
 
@@ -48,9 +46,9 @@ None.
                   ProxyPassMatch ^/(.*\.php(/.*)?)$ "fcgi://127.0.0.1:9000/var/www/example"
     
       roles:
-        - geerlingguy.apache
-        - geerlingguy.php
-        - geerlingguy.apache-php-fpm
+        - janosh0815.apache
+        - janosh0815.php
+        - janosh0815.apache_php_fpm
 
 ## License
 

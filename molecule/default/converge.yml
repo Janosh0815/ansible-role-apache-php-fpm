@@ -12,9 +12,9 @@
         documentroot: "/var/www/vhosts/example_com"
 
   roles:
-    - role: geerlingguy.repo-remi
+    - role: janosh0815.repo_remi
       when: ansible_os_family == 'RedHat'
-    - role: geerlingguy.apache
-    - role: geerlingguy.php-versions
-    - role: geerlingguy.php
-    - role: geerlingguy.apache-php-fpm
+    - role: janosh0815.apache
+    - role: janosh0815.php_versions
+    - role: janosh0815.php
+    - role: janosh0815.apache_php_fpm
